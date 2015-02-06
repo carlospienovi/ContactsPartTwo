@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="stars">
+      <item>Sirius</item>
+      <item>Canopus</item>
+      <item>Alpha Centauri</item>
+      <item>Arcturus</item>
+      <item>Vega</item>
+      <item>Capella</item>
+      <item>Rigel</item>
+      <item>Procyon</item>
+      <item>Betelgeuse</item>
+      <item>Achernar</item>
+      <item>Agena</item>
+      <item>Altair</item>
+      <item>Acrux</item>
+      <item>Aldebaran</item>
+      <item>Spica</item>
+      <item>Antares</item>
+      <item>Pollux</item>
+      <item>Fomalhaut</item>
+      <item>Deneb</item>
+      <item>Mimosa</item>
+      <item>Regulus</item>
+      <item>Adara</item>
+      <item>Castor</item>
+      <item>Shaula</item>
+      <item>Gacrux</item>
+      <item>Bellatrix</item>
+      <item>El Nath</item>
+      <item>Miaplacidus</item>
+      <item>Alnilam</item>
+      <item>Alnitak</item>
+      <item>Alnair</item>
+      <item>Alioth</item>
+      <item>Suhail</item>
+      <item>Dubhe</item>
+      <item>Kaus Australis</item>
+      <item>Mirfak</item>
+      <item>Wezen</item>
+      <item>Benetnasch</item>
+      <item>Sargas</item>
+      <item>Avior</item>
+      <item>Alhena</item>
+      <item>Peacock</item>
+      <item>Atria</item>
+      <item>Koo She</item>
+      <item>Polaris</item>
+      <item>Mirzam</item>
+      <item>Alphard</item>
+      <item>Hamal</item>
+      <item>Algieba</item>
+      <item>Deneb Kaitos</item>
+      <item>Saiph</item>
+      <item>Nunki</item>
+      <item>Menkent</item>
+      <item>Alpheratz</item>
+      <item>Mirach</item>
+      <item>Kochab</item>
+      <item>Rasalhague</item>
+      <item>Algol</item>
+      <item>Beta Gruis</item>
+      <item>Denebola</item>
+      <item>Almach</item>
+      <item>Muhlifain</item>
+      <item>Naos</item>
+      <item>Alphecca</item>
+      <item>Suhail</item>
+      <item>Eltanin</item>
+      <item>Mizar</item>
+      <item>Mintaka</item>
+      <item>Sadr</item>
+      <item>Schedar</item>
+      <item>Aspidiske</item>
+      <item>Caph</item>
+      <item>Epsilon Centauri</item>
+      <item>Kakkab</item>
+      <item>Dschubba</item>
+      <item>Wei</item>
+      <item>Marfikent</item>
+      <item>Merak</item>
+      <item>Ankaa</item>
+      <item>Girtab</item>
+      <item>Tsih</item>
+      <item>Izar</item>
+      <item>Enif</item>
+      <item>Aludra</item>
+      <item>Scheat</item>
+      <item>Phecda</item>
+      <item>Sabik</item>
+      <item>Alderamin</item>
+      <item>Markeb</item>
+      <item>Markab</item>
+      <item>Gienah</item>
+      <item>Acrab</item>
+    </string-array>
+</resources>

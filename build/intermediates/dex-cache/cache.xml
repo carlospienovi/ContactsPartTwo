@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\carlos.pienovi\AndroidStudioProjects\Contacts\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\carlos.pienovi\AndroidStudioProjects\Contacts\app\build\intermediates\pre-dexed\debug\classes-9f832b44950111cb4acfc6261d213aead67ffe6d.jar" />
+    </item>
+    <item
+        jar="C:\Users\carlos.pienovi\AndroidStudioProjects\ToDo\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\carlos.pienovi\AndroidStudioProjects\ToDo\app\build\intermediates\pre-dexed\debug\classes-400e6ee07af2dfa37eae042b31e801c8aded02e8.jar" />
+    </item>
+    <item
+        jar="C:\Users\carlos.pienovi\AndroidStudioProjects\Contacts\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\carlos.pienovi\AndroidStudioProjects\Contacts\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-99a2da363cbfb8f4e24277bcc60e5444c494487a.jar" />
+    </item>
+    <item
+        jar="C:\Users\carlos.pienovi\.gradle\caches\modules-2\files-2.1\com.j256.ormlite\ormlite-core\4.48\e579bd2905d0399af5029aaaf9817d5fa0ca88a5\ormlite-core-4.48.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e579bd2905d0399af5029aaaf9817d5fa0ca88a5">
+        <dex dex="C:\Users\carlos.pienovi\AndroidStudioProjects\Contacts\app\build\intermediates\pre-dexed\debug\ormlite-core-4.48-f05c3d08dcc3ca3b2823daa34a56071036941405.jar" />
+    </item>
+    <item
+        jar="C:\Users\carlos.pienovi\AndroidStudioProjects\Contacts\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\carlos.pienovi\AndroidStudioProjects\Contacts\app\build\intermediates\pre-dexed\debug\classes-b5f18c120fbec63938be63652d47e76a0c31cc63.jar" />
+    </item>
+    <item
+        jar="C:\Users\carlos.pienovi\.gradle\caches\modules-2\files-2.1\com.j256.ormlite\ormlite-android\4.48\afa06f539a4026c10b247386312aa67404b80a16\ormlite-android-4.48.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="afa06f539a4026c10b247386312aa67404b80a16">
+        <dex dex="C:\Users\carlos.pienovi\AndroidStudioProjects\Contacts\app\build\intermediates\pre-dexed\debug\ormlite-android-4.48-22e493f5776c771e0056d6ec8c4f8a97fcd93456.jar" />
+    </item>
+    <item
+        jar="C:\Users\carlos.pienovi\AndroidStudioProjects\SETILite\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\carlos.pienovi\AndroidStudioProjects\SETILite\app\build\intermediates\pre-dexed\debug\classes-56215aa5e686c3da719a09cc3c789d592450eec8.jar" />
+    </item>
+    <item
+        jar="C:\Users\carlos.pienovi\AndroidStudioProjects\ToDo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\carlos.pienovi\AndroidStudioProjects\ToDo\app\build\intermediates\pre-dexed\debug\classes-b747c3e3839a5587867cedefd656a70c2bb164c4.jar" />
+    </item>
+    <item
+        jar="C:\Users\carlos.pienovi\AndroidStudioProjects\SETILite\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\carlos.pienovi\AndroidStudioProjects\SETILite\app\build\intermediates\pre-dexed\debug\classes-7372266f9b2c3e6081c04444866762422f23fbc8.jar" />
+    </item>
+    <item
+        jar="C:\Users\carlos.pienovi\AndroidStudioProjects\ToDo\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\carlos.pienovi\AndroidStudioProjects\ToDo\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-ff11f4f40b859251d4c353e673fc4469165bc70a.jar" />
+    </item>
+    <item
+        jar="C:\Users\carlos.pienovi\AndroidStudioProjects\SETILite\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\carlos.pienovi\AndroidStudioProjects\SETILite\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-21b0e7ab8a6f2487713d872ac22ef657c0216f49.jar" />
+    </item>
+    <item
+        jar="C:\sdks\android\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Users\carlos.pienovi\AndroidStudioProjects\SETILite\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-1c88a03ff7e2f4d4bc318593a88ad665f742f082.jar" />
+    </item>
+
+</items>

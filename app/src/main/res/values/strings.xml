@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ContactsPartTwo</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_add">Add</string>
+    <string name="nothing_text">You havent added anything yet</string>
+    <string name="checkbox_done">Done</string>
+    <string name="title_activity_create_task">NewContact</string>
+    <string name="new_contact_name">First Name</string>
+    <string name="new_contact_last_name">Last Name</string>
+    <string name="new_contact_nickname">Nickname</string>
+    <string name="new_contact_save">Save</string>
+    <string name="new_contact_image">New contact image</string>
+    <string name="list_contact_image_description">List contact image</string>
+    <string name="button_take_picture">Take picture!</string>
+
+</resources>
