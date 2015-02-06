@@ -29,7 +29,7 @@ public class Contact implements Parcelable {
     @DatabaseField(columnName = IMAGE, dataType = DataType.BYTE_ARRAY)
     private byte[] image;
 
-    public Contact(){
+    public Contact() {
 
     }
 

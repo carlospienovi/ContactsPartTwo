@@ -76,30 +76,19 @@ public class ContactsListFragment extends ListFragment {
                 if (resultCode == Activity.RESULT_OK) {
                     Contact newContact = data
                             .getParcelableExtra(CreateNewContactActivity.NEW_CONTACT);
-                    addNewTask(newContact);
+                    mAdapter.add(newContact);
                 }
                 break;
         }
     }
 
-    private void addNewTask(Contact contact) {
-        mAdapter.add(contact);
-        mAdapter.notifyDataSetChanged();
-        saveContact(contact);
-    }
-
-    private void saveContact(Contact contact) {
+    private List<Contact> getContacts() {
         try {
             Dao<Contact, Integer> dao = getDBHelper().getDocumentDao();
-            dao.create(contact);
+            return dao.queryForAll();
         } catch (SQLException e) {
-            Log.e(LOG_TAG, "Failed to create DAO.", e);
+            return new ArrayList<>();
         }
-    }
-
-    private List<Contact> getContacts() throws SQLException {
-        Dao<Contact, Integer> dao = getDBHelper().getDocumentDao();
-        return dao.queryForAll();
     }
 
     @Override
@@ -116,13 +105,8 @@ public class ContactsListFragment extends ListFragment {
     }
 
     private void prepareListView() {
-        List<Contact> entries;
-        try {
-            entries = getContacts();
-        } catch (SQLException e) {
-            entries = new ArrayList<Contact>();
-        }
-        mAdapter = new ContactAdapter(getActivity(), entries);
+        List<Contact> entries = getContacts();
+        mAdapter = new ContactAdapter(getActivity(), getDBHelper(), entries);
         setListAdapter(mAdapter);
     }
 }

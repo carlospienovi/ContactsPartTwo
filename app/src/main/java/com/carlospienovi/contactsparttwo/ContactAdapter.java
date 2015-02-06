@@ -9,6 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.j256.ormlite.dao.Dao;
+
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -18,11 +21,24 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
 
     Context mContext;
     List<Contact> mTaskList;
+    DatabaseHelper mDBHelper;
 
-    public ContactAdapter(Context context, List<Contact> tasks) {
+    public ContactAdapter(Context context, DatabaseHelper DBHelper, List<Contact> tasks) {
         super(context, R.layout.list_item_entry, tasks);
         mContext = context;
-        this.mTaskList = tasks;
+        mTaskList = tasks;
+        mDBHelper = DBHelper;
+    }
+
+    @Override
+    public void add(Contact object) {
+        super.add(object);
+        try {
+            Dao<Contact, Integer> dao = mDBHelper.getDocumentDao();
+            dao.create(object);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
