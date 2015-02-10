@@ -11,6 +11,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 
 import com.j256.ormlite.android.apptools.OpenHelperManager;
 import com.j256.ormlite.dao.Dao;
@@ -24,8 +25,6 @@ public class ContactsListFragment extends ListFragment {
 
     private static final String LOG_TAG = ContactsListFragment.class.getSimpleName();
     private static final int REQUEST_CODE_CREATE_CONTACT = 1;
-
-//    private static List<Contact> entries = new ArrayList<>();
 
     ContactAdapter mAdapter;
     DatabaseHelper mDBHelper = null;
@@ -56,27 +55,36 @@ public class ContactsListFragment extends ListFragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_add:
-                toNewTask();
+                newContact();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
-    private void toNewTask() {
-        Intent i = new Intent(getActivity(), CreateNewContactActivity.class);
+    private void newContact() {
+        Intent i = new Intent(getActivity(), CreateUpdateContactActivity.class);
         startActivityForResult(i, REQUEST_CODE_CREATE_CONTACT);
     }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
             case REQUEST_CODE_CREATE_CONTACT:
                 if (resultCode == Activity.RESULT_OK) {
                     Contact newContact = data
-                            .getParcelableExtra(CreateNewContactActivity.NEW_CONTACT);
+                            .getParcelableExtra(CreateUpdateContactActivity.NEW_CONTACT);
+                    int index = data.getIntExtra(CreateUpdateContactActivity.CONTACT_POSITION, -1);
+                    if (index != -1) {
+                        mAdapter.removeByPosition(index);
+                    }
                     mAdapter.add(newContact);
+                }
+                if (resultCode == CreateUpdateContactActivity.DELETE_CONTACT) {
+                    int index = data.getIntExtra(CreateUpdateContactActivity.CONTACT_POSITION, -1);
+                    if (index != -1) {
+                        mAdapter.removeByPosition(index);
+                    }
                 }
                 break;
         }
@@ -108,5 +116,15 @@ public class ContactsListFragment extends ListFragment {
         List<Contact> entries = getContacts();
         mAdapter = new ContactAdapter(getActivity(), getDBHelper(), entries);
         setListAdapter(mAdapter);
+        getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.d("coso", "contact clicked");
+                Intent i = new Intent(getActivity(), CreateUpdateContactActivity.class);
+                i.putExtra(CreateUpdateContactActivity.CONTACT_TO_EDIT, mAdapter.getItem(position));
+                i.putExtra(CreateUpdateContactActivity.CONTACT_POSITION, position);
+                startActivityForResult(i, REQUEST_CODE_CREATE_CONTACT);
+            }
+        });
     }
 }

@@ -9,6 +9,13 @@
         <dex dex="C:\Users\carlos.pienovi\AndroidStudioProjects\Contacts\app\build\intermediates\pre-dexed\debug\classes-9f832b44950111cb4acfc6261d213aead67ffe6d.jar" />
     </item>
     <item
+        jar="C:\Users\carlos.pienovi\AndroidStudioProjects\ContactsPartTwo\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\carlos.pienovi\AndroidStudioProjects\ContactsPartTwo\app\build\intermediates\pre-dexed\debug\classes-ecff97ed85fecd165948f3517610dbbe65c9a8bc.jar" />
+    </item>
+    <item
         jar="C:\Users\carlos.pienovi\AndroidStudioProjects\ToDo\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -30,6 +37,13 @@
         <dex dex="C:\Users\carlos.pienovi\AndroidStudioProjects\Contacts\app\build\intermediates\pre-dexed\debug\ormlite-core-4.48-f05c3d08dcc3ca3b2823daa34a56071036941405.jar" />
     </item>
     <item
+        jar="C:\Users\carlos.pienovi\AndroidStudioProjects\ContactsPartTwo\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\carlos.pienovi\AndroidStudioProjects\ContactsPartTwo\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-5655a3da209dd5de17af297ed75f437f9e968387.jar" />
+    </item>
+    <item
         jar="C:\Users\carlos.pienovi\AndroidStudioProjects\Contacts\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -49,6 +63,13 @@
         revision="21.1.2"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
         <dex dex="C:\Users\carlos.pienovi\AndroidStudioProjects\SETILite\app\build\intermediates\pre-dexed\debug\classes-56215aa5e686c3da719a09cc3c789d592450eec8.jar" />
+    </item>
+    <item
+        jar="C:\Users\carlos.pienovi\AndroidStudioProjects\ContactsPartTwo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\carlos.pienovi\AndroidStudioProjects\ContactsPartTwo\app\build\intermediates\pre-dexed\debug\classes-2e3bfc7beb394d8e95e402bfd90f0571c7092be8.jar" />
     </item>
     <item
         jar="C:\Users\carlos.pienovi\AndroidStudioProjects\ToDo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"

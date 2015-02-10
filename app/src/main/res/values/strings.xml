@@ -14,5 +14,6 @@
     <string name="new_contact_image">New contact image</string>
     <string name="list_contact_image_description">List contact image</string>
     <string name="button_take_picture">Take picture!</string>
+    <string name="button_delete_contact">Delete</string>
 
 </resources>

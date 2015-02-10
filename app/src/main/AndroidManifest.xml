@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CreateNewContactActivity"
+            android:name=".CreateUpdateContactActivity"
             android:label="@string/title_activity_create_task" />
     </application>
 

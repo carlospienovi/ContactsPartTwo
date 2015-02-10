@@ -12,18 +12,23 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
 
-public class CreateNewContactActivity extends ActionBarActivity {
+public class CreateUpdateContactActivity extends ActionBarActivity {
 
     public static final String NEW_CONTACT = "NEW_CONTACT";
-    private static final int REQUEST_CODE_CAMERA = 1337;
+    public static final String CONTACT_TO_EDIT = "EDIT_CONTACT";
+    public static final String CONTACT_POSITION = "CONTACT_POSITION";
 
-    Button mDoneButton, mButtonTakePicture;
+    private static final int REQUEST_CODE_CAMERA = 1337;
+    public static final int DELETE_CONTACT = 123;
+
+    Button mDoneButton, mButtonTakePicture, mButtonDeleteContact;
     EditText mFirstName, mLastName, mNickname;
     ImageView mContactImage;
 
@@ -34,7 +39,23 @@ public class CreateNewContactActivity extends ActionBarActivity {
         init();
         firstNameEditText();
         prepareDoneButton();
+        prepareDeleteButton();
+        editedContact();
         takePicture();
+    }
+
+    private void editedContact() {
+        Intent i = getIntent();
+        if (i.hasExtra(CONTACT_TO_EDIT)) {
+            mButtonDeleteContact.setVisibility(View.VISIBLE);
+            Contact existingContact = i.getExtras().getParcelable(CONTACT_TO_EDIT);
+            mFirstName.setText(existingContact.getFirstName());
+            mLastName.setText(existingContact.getLastName());
+            mNickname.setText(existingContact.getNickname());
+            mContactImage.setImageBitmap(existingContact.getImage());
+        } else {
+            mButtonDeleteContact.setVisibility(View.GONE);
+        }
     }
 
     private void takePicture() {
@@ -68,6 +89,7 @@ public class CreateNewContactActivity extends ActionBarActivity {
 
     private void init() {
         mDoneButton = (Button) findViewById(R.id.button_new_contact_save);
+        mButtonDeleteContact = (Button) findViewById(R.id.button_delete_contact);
         mFirstName = (EditText) findViewById(R.id.new_contact_name);
         mLastName = (EditText) findViewById(R.id.new_contact_last_name);
         mNickname = (EditText) findViewById(R.id.new_contact_nickname);
@@ -88,6 +110,18 @@ public class CreateNewContactActivity extends ActionBarActivity {
         }
     }
 
+    private void prepareDeleteButton() {
+        mButtonDeleteContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent data = new Intent();
+                data.putExtra(CONTACT_POSITION, getIntent().getIntExtra(CONTACT_POSITION, -1));
+                setResult(DELETE_CONTACT, data);
+                finish();
+            }
+        });
+    }
+
     private void prepareDoneButton() {
         mDoneButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +134,7 @@ public class CreateNewContactActivity extends ActionBarActivity {
                         drawableToBitmap(mContactImage.getDrawable())
                 );
                 data.putExtra(NEW_CONTACT, contact);
+                data.putExtra(CONTACT_POSITION, getIntent().getIntExtra(CONTACT_POSITION, -1));
                 setResult(Activity.RESULT_OK, data);
                 finish();
             }

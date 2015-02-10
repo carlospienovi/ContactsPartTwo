@@ -58,16 +58,29 @@
         android:id="@+id/button_take_picture" />
 
     <FrameLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/button_new_contact_save"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/new_contact_save"
-            android:enabled="false"
-            android:layout_gravity="center_horizontal|bottom" />
+            android:layout_gravity="bottom">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_delete_contact"
+                android:id="@+id/button_delete_contact" />
+
+            <Button
+                android:id="@+id/button_new_contact_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/new_contact_save"
+                android:enabled="false" />
+
+        </LinearLayout>
     </FrameLayout>
 
 </LinearLayout>

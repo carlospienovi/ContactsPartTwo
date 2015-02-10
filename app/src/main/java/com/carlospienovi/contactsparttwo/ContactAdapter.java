@@ -20,22 +20,37 @@ import java.util.List;
 public class ContactAdapter extends ArrayAdapter<Contact> {
 
     Context mContext;
-    List<Contact> mTaskList;
+    List<Contact> mContactsList;
     DatabaseHelper mDBHelper;
 
-    public ContactAdapter(Context context, DatabaseHelper DBHelper, List<Contact> tasks) {
-        super(context, R.layout.list_item_entry, tasks);
+    public ContactAdapter(Context context, DatabaseHelper DBHelper, List<Contact> contacts) {
+        super(context, R.layout.list_item_entry, contacts);
         mContext = context;
-        mTaskList = tasks;
+        mContactsList = contacts;
         mDBHelper = DBHelper;
     }
 
     @Override
-    public void add(Contact object) {
-        super.add(object);
+    public void add(Contact contact) {
+        super.add(contact);
         try {
             Dao<Contact, Integer> dao = mDBHelper.getDocumentDao();
-            dao.create(object);
+            dao.create(contact);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void removeByPosition(int position) {
+        remove(mContactsList.get(position));
+    }
+
+    @Override
+    public void remove(Contact object) {
+        super.remove(object);
+        try {
+            Dao<Contact, Integer> dao = mDBHelper.getDocumentDao();
+            dao.delete(object);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -50,7 +65,7 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
 
     private void displayContentInRowView(int position, View rowView) {
         if (rowView != null) {
-            Contact contact = mTaskList.get(position);
+            Contact contact = mContactsList.get(position);
 
             TextView textViewFirstName = (TextView) rowView.findViewById(R.id.list_contact_first_name);
             TextView textViewLastName = (TextView) rowView.findViewById(R.id.list_contact_last_name);
